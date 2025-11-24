@@ -25,8 +25,6 @@ function App() {
 }
 
 function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
   // 示例預算數據
   const budgetData: Budget[] = [
     { yyyymm: '202412', amount: 50000, id: '1' },

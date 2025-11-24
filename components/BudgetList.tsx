@@ -33,26 +33,6 @@ const BudgetList: React.FC<BudgetListProps> = ({
     }
   };
 
-  // 處理預算刪除
-  const handleBudgetDelete = (budget: BudgetType) => {
-    Alert.alert(
-      '確認刪除',
-      `確定要刪除 ${budget.yyyymm} 的預算嗎？`,
-      [
-        { text: '取消', style: 'cancel' },
-        { 
-          text: '刪除', 
-          style: 'destructive',
-          onPress: () => {
-            if (onBudgetDelete) {
-              onBudgetDelete(budget);
-            }
-          }
-        }
-      ]
-    );
-  };
-
   // 渲染統計信息
   const renderStats = () => (
     <View style={styles.statsContainer}>

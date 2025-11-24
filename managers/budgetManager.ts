@@ -113,8 +113,8 @@ export class BudgetManager {
    * @returns Date 物件
    */
   private parseYyyyMmToDate(yyyymm: string): Date {
-    const year = parseInt(yyyymm.substring(0, 4));
-    const month = parseInt(yyyymm.substring(4, 6)) - 1; // 月份從 0 開始
+    const year = parseInt(yyyymm.substring(0, 4), 10);
+    const month = parseInt(yyyymm.substring(4, 6), 10) - 1; // 月份從 0 開始
     return new Date(year, month, 1); // 設定為該月的第一天
   }
 

@@ -9,19 +9,19 @@ interface BudgetProps {
 
 const Budget: React.FC<BudgetProps> = ({ yyyymm, amount, onPress }) => {
   // 格式化年份月份顯示
-  const formatDate = (yyyymm: string) => {
-    const year = yyyymm.substring(0, 4);
-    const month = yyyymm.substring(4, 6);
+  const formatDate = (dateString: string) => {
+    const year = dateString.substring(0, 4);
+    const month = dateString.substring(4, 6);
     return `${year}年${month}月`;
   };
 
   // 格式化金額顯示
-  const formatAmount = (amount: number) => {
+  const formatAmount = (value: number) => {
     return new Intl.NumberFormat('zh-TW', {
       style: 'currency',
       currency: 'TWD',
       minimumFractionDigits: 0,
-    }).format(amount);
+    }).format(value);
   };
 
   // 處理點擊事件
