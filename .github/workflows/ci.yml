@@ -54,17 +54,16 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0'
+          ruby-version: '3.2.3'
           bundler-cache: true
+          working-directory: ios
       
       - name: Install dependencies
         run: npm install
       
       - name: Install CocoaPods dependencies
         working-directory: ios
-        run: |
-          bundle install
-          bundle exec pod install
+        run: bundle exec pod install
       
       - name: Build iOS app
         working-directory: ios
