@@ -8,7 +8,6 @@
 import { StatusBar, StyleSheet, useColorScheme, View, Text, Alert } from 'react-native';
 import {
   SafeAreaProvider,
-  useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import BudgetList from './components/BudgetList';
 import { Budget } from './types/budget';

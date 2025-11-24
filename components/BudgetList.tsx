@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList, Alert } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 import Budget from './Budget';
 import { Budget as BudgetType } from '../types/budget';
 
@@ -12,7 +12,7 @@ interface BudgetListProps {
 const BudgetList: React.FC<BudgetListProps> = ({ 
   budgets, 
   onBudgetPress, 
-  onBudgetDelete 
+  onBudgetDelete: _onBudgetDelete,
 }) => {
   // 計算統計信息
   const calculateStats = () => {
